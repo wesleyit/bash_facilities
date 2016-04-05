@@ -6,7 +6,7 @@
 # If they are odd, it displays a drawing made in asciiart.
 # You can change the fortunes in the $FORTUNE_DIR if you dont like them.
 
-FORTUNE_DIR="$BFDIR/.bash_facilities/fortunes"
+FORTUNE_DIR="$BFDIR/fortunes"
 FORTUNE_COOKIE="$(( `date +%s` % 2  ))"
 if [ $FORTUNE_COOKIE -eq 0 ]
 then

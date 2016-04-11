@@ -31,4 +31,8 @@ do
   source "$file"
 done
 
+## If you want to include some quick config outside the 
+# structure, use the local file (not included to GIT)
+[ -e "$HOME/.bashrc.local" ] && source "$HOME/.bashrc.local"
+
 #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#

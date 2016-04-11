@@ -139,3 +139,11 @@ function emacs() {
 	[ $? -eq 0  ] && \emacsclient --alternate-editor="" -n $X11 "$@" ||
 	\emacsclient --alternate-editor="" -n $X11 -c "$@"
 }
+
+function debupdate() {
+	sudo apt-get update
+	sudo apt-get install -f -y
+	sudo apt-get upgrade -y
+	sudo apt-get dist-upgrade -y
+	sudo apt-get autoremove -y
+}

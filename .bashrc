@@ -36,3 +36,7 @@ done
 [ -e "$HOME/.bashrc.local" ] && source "$HOME/.bashrc.local"
 
 #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+
+## vim must ignore global vimrc
+alias vim='vim -u ~/.vimrc'
+

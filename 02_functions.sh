@@ -147,3 +147,11 @@ function debupdate() {
 	sudo apt-get dist-upgrade -y
 	sudo apt-get autoremove -y
 }
+
+function docker-ip() {
+	for container in $(docker ps -aq)
+	do
+		docker inspect --format '{{.Name}} -> {{.NetworkSettings.IPAddress}}' $container
+	done
+}
+

@@ -47,7 +47,7 @@ alias vim="vim -u ~/.vimrc"
 
 ## Better Docker management
 alias docker-rma='docker rm -f $(docker ps -aq)' 
-alias docker-ip="docker inspect --format '{{ .NetworkSettings.IPAddress  }}'"
+alias docker-ip="for c in `docker ps -aq`; do docker inspect --format '{{.Name}} -> {{.NetworkSettings.IPAddress}}' $c; done"
 
 ## Emacs aliases
 alias em='emacs -nw'

@@ -98,7 +98,7 @@ function mkdircd() {
 	mkdir "$1" && cd "$1"
 }
 
-function ruby_htto_server() {
+function ruby_http_server() {
 	ruby -run -e httpd . -p 8080
 }
 
@@ -120,24 +120,6 @@ function unset_proxy() {
 	unset HTTPS_PROXY
 	unset FTP_PROXY
 	env | grep -i proxy
-}
-
-function emacs() {
-	## Is the emacs server running?
-	pgrep -l "^emacs$" > /dev/null
-	[ $? -ne 0  ] && emacs --daemon
-
-
-	## Text or X11?
-	[ -z "$DISPLAY"  ] && X11="-t" || X11=""
-
-	## Return a list of all frames on $DISPLAY
-	\emacsclient -e "(frames-on-display-list \"$DISPLAY\")" &>/dev/null
-
-	## Open frames detected, so open files in current frame
-	# or if  no open frames detected, open new frame
-	[ $? -eq 0  ] && \emacsclient --alternate-editor="" -n $X11 "$@" ||
-	\emacsclient --alternate-editor="" -n $X11 -c "$@"
 }
 
 function debupdate() {

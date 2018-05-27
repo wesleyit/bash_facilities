@@ -48,8 +48,3 @@ alias vim="vim -u ~/.vimrc"
 ## Better Docker management
 alias docker-rma='docker rm -f $(docker ps -aq)' 
 
-## Emacs aliases
-alias em='emacs -nw'
-alias emacs="emacsclient -c -a emacs"
-alias rcemacs="systemctl --user restart emacsd.service"
-

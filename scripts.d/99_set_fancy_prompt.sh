@@ -19,6 +19,10 @@ export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWUPSTREAM="auto"
 export GIT_PS1_SHOWCOLORHINTS=1
 
+function ps_venv() {
+[[ -z "$VIRTUAL_ENV" ]] && echo "$1" || echo '(V)'
+}
+
 #export PS1="[$ps_user: $ps_path$ps_reset\$(__git_ps1 \" git:(%s)\")]$ps_priv $ps_reset"
-PROMPT_COMMAND='__git_ps1 "[$ps_user: $ps_path$ps_reset" "]$ps_priv $ps_reset"'
+PROMPT_COMMAND='__git_ps1 "[$ps_user: $ps_path$ps_reset" "]$(ps_venv $ps_priv) $ps_reset"'
 

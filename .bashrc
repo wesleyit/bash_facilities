@@ -37,6 +37,3 @@ done
 
 #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 
-## vim must ignore global vimrc
-alias vim='vim -u ~/.vimrc'
-

@@ -43,7 +43,7 @@ alias ccat='pygmentize -O style=monokai -f console256 -g'
 alias dog='ccat'
 
 ## Vim ignoring global config
-alias vim="vim -u ~/.vimrc"
+# alias vim="vim -u ~/.vimrc"
 
 ## Better Docker management
 alias docker-rma='docker rm -f $(docker ps -aq)' 

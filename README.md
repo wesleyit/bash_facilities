@@ -3,7 +3,9 @@ Welcome to Bash Facilities
 
 **Hi! This is "bash_facilities"**, a set of scripts to 
 give you a better management of your bash config and 
-init files. 
+init files. You also will have a nice and useful prompt:
+
+![${USER}](./demo_bash_facilities.gif)
 
 Now it is easier to locate and change
 your functions, aliases and configs.

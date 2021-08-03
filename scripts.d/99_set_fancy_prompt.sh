@@ -30,18 +30,16 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 if [ "$UID" -eq "0" ]; then
     COLOR='01;31m'
     SYM="$ROOT_SYM"
-    INDICATOR='#'
 else
     COLOR='01;32m'
     SYM="$USER_SYM"
-    INDICATOR='$'
 fi
 
-ps_user="\[${ESC}${COLOR}\]${USER}\[${END}\]"
+ps_user="\[${ESC}${COLOR}\]\u\[${END}\]"
 ps_sym="\[${ESC}${COLOR}\]${SYM}\[${END}\]"
-ps_host="\[${ESC}${COLOR}\]${HOSTNAME}\[${END}\]"
-ps_path="\[${ESC}${BLUE}\]${PWD}\[${END}\]"
-ps_priv="\[${ESC}${COLOR}\]${INDICATOR}\[${END}\]"
+ps_host="\[${ESC}${COLOR}\]\h\[${END}\]"
+ps_path="\[${ESC}${BLUE}\]\w\[${END}\]"
+ps_priv="\[${ESC}${COLOR}\]\$\[${END}\]"
 
 function ps_venv() {
     local COLOR='01;33m'

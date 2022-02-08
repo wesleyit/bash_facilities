@@ -16,6 +16,7 @@ GREEN="$(tput setaf 2)"
 YELLOW="$(tput setaf 3)"
 BLUE="$(tput setaf 4)"
 PURPLE="$(tput setaf 5)"
+CYAN="$(tput setaf 6)"
 
 ## Set git options
 export GIT_PS1_SHOWDIRTYSTATE=1
@@ -40,15 +41,15 @@ ps_path="\[${BLUE}\]\w\[${DEF}\]"
 ps_priv="\[${COLOR}\]\$\[${DEF}\]"
 
 function ps_venv() {
-    local COLOR="${BLUE}"
+    local COLOR="${CYAN}"
     [[ -z "$VIRTUAL_ENV" ]] || 
-        echo -ne "──[${COLOR}${VENV_SYM} virtualenv]"
+        echo -ne "──[${COLOR}${VENV_SYM} virtualenv${DEF}]"
 }
 
 function ps_aws() {
-    local COLOR="${BLUE}"
+    local COLOR="${YELLOW}"
     if env | egrep -q 'AWS_PROFILE|AWS_ACCESS_KEY_ID'; then
-        echo -ne "──[${COLOR}${AWS_SYM} aws]"
+        echo -ne "──[${COLOR}${AWS_SYM} aws${DEF}]"
     fi
 }
 

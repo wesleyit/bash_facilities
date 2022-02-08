@@ -1,22 +1,10 @@
 ## Here you can define your default options for commands, or even
 # create your own commands using bash aliases
-SYSTEM=$(uname -s)
 
-## Grep related aliases
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias grep='grep --color=auto'
-alias igrep='grep --color=auto -i'
+## LS with colors
+alias ls='ls -G'
 
-## LS aliases
-alias l='ls -alF --color=auto'
-alias l.='ls -d .* --color=auto'
-alias ll='ls -l --color=auto'
-alias ls='ls --color=auto'
-
-## Open command like in Mac OS X
-# and a reload to re-read the config rc files
-alias open='xdg-open'
+## Reload config
 alias reload="source ~/.bashrc"
 
 ## Safe move and copy commands
@@ -41,10 +29,3 @@ alias gpc='git push origin $(git branch | head -n 1 | cut -d " " -f 2-)'
 ## Cat with color and syntax highlight
 alias ccat='pygmentize -O style=monokai -f console256 -g'
 alias dog='ccat'
-
-## Vim ignoring global config
-# alias vim="vim -u ~/.vimrc"
-
-## Better Docker management
-alias docker-rma='docker rm -f $(docker ps -aq)' 
-

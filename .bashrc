@@ -1,4 +1,5 @@
 #!/bin/bash
+
 ## Hello, this is your .bashrc. 
 # It is a symbolic link to the file inside your BFDIR.
 # And if you make changes to this file, is a good 
@@ -35,5 +36,4 @@ done
 # structure, use the local file (not included to GIT)
 [ -e "$HOME/.bashrc.local" ] && source "$HOME/.bashrc.local"
 
-#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
-
+## Here the default BF config ends ---

@@ -10,14 +10,12 @@ VENV_SYM=''
 AWS_SYM=''
 
 # Don't change after this point
-ESC='\e['
-END='\e[m'
-RST='\e[0;0m'
-RED='01;31m'
-GREEN='01;32m'
-YELLOW='01;33m'
-BLUE='01;34m'
-
+DEF="$(tput sgr0)"
+RED="$(tput setaf 1)"
+GREEN="$(tput setaf 2)"
+YELLOW="$(tput setaf 3)"
+BLUE="$(tput setaf 4)"
+PURPLE="$(tput setaf 5)"
 
 ## Set git options
 export GIT_PS1_SHOWDIRTYSTATE=1
@@ -28,37 +26,36 @@ export GIT_PS1_SHOWCOLORHINTS=1
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 if [ "$UID" -eq "0" ]; then
-    COLOR='01;31m'
+    COLOR="${RED}"
     SYM="$ROOT_SYM"
 else
-    COLOR='01;32m'
+    COLOR="${GREEN}"
     SYM="$USER_SYM"
 fi
 
-ps_user="\[${ESC}${COLOR}\]\u\[${END}\]"
-ps_sym="\[${ESC}${COLOR}\]${SYM}\[${END}\]"
-ps_host="\[${ESC}${COLOR}\]\h\[${END}\]"
-ps_path="\[${ESC}${BLUE}\]\w\[${END}\]"
-ps_priv="\[${ESC}${COLOR}\]\$\[${END}\]"
+ps_user="\[${COLOR}\]\u\[${DEF}\]"
+ps_sym="\[${COLOR}\]${SYM}\[${DEF}\]"
+ps_host="\[${COLOR}\]\h\[${DEF}\]"
+ps_path="\[${BLUE}\]\w\[${DEF}\]"
+ps_priv="\[${COLOR}\]\$\[${DEF}\]"
 
 function ps_venv() {
-    local COLOR='01;33m'
+    local COLOR="${BLUE}"
     [[ -z "$VIRTUAL_ENV" ]] || 
-        echo -ne "──[${ESC}${COLOR}${VENV_SYM} virtualenv${END}]"
+        echo -ne "──[${COLOR}${VENV_SYM} virtualenv]"
 }
 
 function ps_aws() {
-    local COLOR='01;33m'
+    local COLOR="${BLUE}"
     if env | egrep -q 'AWS_PROFILE|AWS_ACCESS_KEY_ID'; then
-        echo -ne "──[${ESC}${COLOR}${AWS_SYM} aws${END}]"
+        echo -ne "──[${COLOR}${AWS_SYM} aws]"
     fi
 }
 
 function ps_git() {
-    local COLOR='01;35m'
+    local COLOR="${PURPLE}"
     if git status &> /dev/null; then
-
-        echo -ne "──[${ESC}${COLOR}${GIT_SYM} git$(__git_ps1)${END}]"
+        echo -ne "──[${COLOR}${GIT_SYM} git$(__git_ps1)${DEF}]"
     fi
 }
 

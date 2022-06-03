@@ -9,10 +9,10 @@ export PATH="${PATH}:${HOME}/bin"
 # eval "$(rbenv init -)"
 
 ## Include Pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init --path)"
+# eval "$(pyenv init -)"
 
 ## Include Flutter
 # export PATH="${PATH}:/opt/flutter/bin"

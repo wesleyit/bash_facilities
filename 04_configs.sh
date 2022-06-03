@@ -7,8 +7,8 @@ export PATH="${PATH}:${HOME}/bin"
 source /usr/share/bash-completion/bash_completion
 
 ## Include rbenv
-#export PATH="$HOME/.rbenv/bin:$PATH"
-#eval "$(rbenv init -)"
+# export PATH="$HOME/.rbenv/bin:$PATH"
+# eval "$(rbenv init -)"
 
 ## Include Pyenv
 # export PYENV_ROOT="$HOME/.pyenv"

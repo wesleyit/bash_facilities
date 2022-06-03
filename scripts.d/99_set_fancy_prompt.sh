@@ -3,8 +3,8 @@ unset PROMPT_COMMAND
 
 # Change these symbols for the ones available on the font
 # you are using in your terminal. This ones works in Agave Nerd Font.
-USER_SYM=' '
-ROOT_SYM=' '
+USER_SYM=''
+ROOT_SYM=''
 GIT_SYM=''
 VENV_SYM=''
 AWS_SYM=''

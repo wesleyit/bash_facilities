@@ -35,5 +35,8 @@ done
 # structure, use the local file (not included to GIT)
 [ -e "$HOME/.bashrc.local" ] && source "$HOME/.bashrc.local"
 
+## We want to open the same dir on new terminal tabs
+[ -e "source /etc/profile.d/vte.sh" ] && source /etc/profile.d/vte.sh
+
 #=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
 

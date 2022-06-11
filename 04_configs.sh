@@ -26,7 +26,7 @@ source /usr/share/bash-completion/bash_completion
 # export PATH="${PATH}:${ANDROID_SDK_ROOT}/tools"
 # export PATH="${PATH}:${ANDROID_SDK_ROOT}/tools/bin"
 
-# Include Nodenv
+## Include Nodenv
 # export PATH="$HOME/.nodenv/bin:$PATH"
 # eval "$(nodenv init -)"
 
@@ -39,4 +39,3 @@ source /usr/share/bash-completion/bash_completion
 ## Rust
 # export PATH="$PATH:$HOME/.cargo/bin"
 # source $HOME/.cargo/env
-

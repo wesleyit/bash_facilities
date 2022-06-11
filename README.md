@@ -17,7 +17,7 @@ Requisites
 
 If you have any problems, try installing the following dependencies:
 
-`sudo apt-get install curl git bash-completion rbenv fortune-mod cowsay`
+`sudo apt-get install curl git bash-completion neofetch fortune-mod cowsay`
 
 If your environment was installed by the Ansible Playbook
 in https://github.com/wesleyit/debian_workstation_devops then you

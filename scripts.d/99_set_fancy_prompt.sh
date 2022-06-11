@@ -38,7 +38,7 @@ ps_user="\[${COLOR}\]\u\[${DEF}\]"
 ps_sym="\[${COLOR}\]${SYM}\[${DEF}\]"
 ps_host="\[${COLOR}\]\h\[${DEF}\]"
 ps_path="\[${BLUE}\]\w\[${DEF}\]"
-ps_priv="\[${COLOR}\]\$\[${DEF}\]"
+ps_priv="\[${COLOR}\]\\$\[${DEF}\]"
 
 function ps_venv() {
     local COLOR="${CYAN}"

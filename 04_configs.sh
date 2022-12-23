@@ -3,6 +3,9 @@
 ## Local bin inside $HOME must be executable
 export PATH="${PATH}:${HOME}/bin"
 
+## Sometimes fortunes goes to games
+export PATH="${PATH}:/usr/games"
+
 ## Invoke the global bash completion
 source /usr/share/bash-completion/bash_completion
 
